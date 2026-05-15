@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h1>Calculadora</h1>
+            <div class="display">
+                <input 
+                    type="text" 
+                    id="display" 
+                    class="display-screen" 
+                    placeholder="0" 
+                    readonly
+                >
+            </div>
+            <div class="buttons-grid">
+                <!-- Row 1: Clear and Operations -->
+                <button class="btn btn-function" onclick="limpiar()">C</button>
+                <button class="btn btn-function" onclick="borrarUltimo()">←</button>
+                <button class="btn btn-function" onclick="agregarOperador('/')">/</button>
+                <button class="btn btn-function" onclick="agregarOperador('*')">×</button>
+
+                <!-- Row 2: Numbers 7-9 and Subtract -->
+                <button class="btn btn-number" onclick="agregarNumero('7')">7</button>
+                <button class="btn btn-number" onclick="agregarNumero('8')">8</button>
+                <button class="btn btn-number" onclick="agregarNumero('9')">9</button>
+                <button class="btn btn-function" onclick="agregarOperador('-')">−</button>
+
+                <!-- Row 3: Numbers 4-6 and Add -->
+                <button class="btn btn-number" onclick="agregarNumero('4')">4</button>
+                <button class="btn btn-number" onclick="agregarNumero('5')">5</button>
+                <button class="btn btn-number" onclick="agregarNumero('6')">6</button>
+                <button class="btn btn-function" onclick="agregarOperador('+')">+</button>
+
+                <!-- Row 4: Numbers 1-3 and Decimal -->
+                <button class="btn btn-number" onclick="agregarNumero('1')">1</button>
+                <button class="btn btn-number" onclick="agregarNumero('2')">2</button>
+                <button class="btn btn-number" onclick="agregarNumero('3')">3</button>
+                <button class="btn btn-function" onclick="agregarDecimal()">.</button>
+
+                <!-- Row 5: Zero and Equals -->
+                <button class="btn btn-number btn-zero" onclick="agregarNumero('0')">0</button>
+                <button class="btn btn-equals" onclick="calcular()">=</button>
+            </div>
+            <div class="info">
+                <p>Calculadora Web v1.0 | Desarrollado por Bertha46</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
